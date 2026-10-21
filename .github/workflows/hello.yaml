@@ -9,6 +9,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
-      - run: echo "Hello ${{ github.actor }}, this is ${{ gtihub.ref_name }}"
+      - run: echo "Hello ${{ github.actor }}, this is ${{ github.ref_name }}"
       - run: ls -la
       - run: python --version 
