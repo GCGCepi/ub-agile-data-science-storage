@@ -1,0 +1,14 @@
+name: Hello
+
+on:
+  push:
+  worfklow_dispatch:
+
+jobs:
+  hello:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - run: echo "Hello ${{ github.actor }}, this is ${{ gtihub.ref_name }}"
+      - run: ls -la
+      - run: python --version
