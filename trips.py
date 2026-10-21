@@ -6,4 +6,5 @@ def add_pickup_day(df: pd.DataFrame) -> pd.DataFrame:
     return df
 # tip_percentage: how much people tip, as a percentage of the fare
 def tip_percentage(df: pd.DataFrame) -> pd.Series:
-    return df["tip_amount"] * 100 / df["fare_amount"]
+    paid = df[df["fare_amount"] > 0]
+    return paid["tip_amount"] * 100 / paid["fare_amount"]
