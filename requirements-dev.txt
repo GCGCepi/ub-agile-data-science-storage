@@ -1,2 +1,2 @@
--r requierements.txt
+-r requirrements.txt
 pytest==9.1.1
