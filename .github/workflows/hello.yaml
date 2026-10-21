@@ -2,7 +2,7 @@ name: Hello
 
 on:
   push:
-  worfklow_dispatch:
+  workflow_dispatch:
 
 jobs:
   hello:
