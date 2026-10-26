@@ -9,7 +9,7 @@ X_train, X_test, y_train, y_test = load_trips()
 mlflow.set_experiment("trip-duration")
 
 with mlflow.start_run():
-    params = {"n_estimators": 50, "max_depth": 5}
+    params = {"n_estimators": 50, "max_depth": 10}
     mlflow.log_params(params)
 
     model = RandomForestRegressor(**params, random_state=42)
