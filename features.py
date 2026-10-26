@@ -16,5 +16,4 @@ def load_trips(path="data/trips.parquet", n=100_000):
     df = df[df["duration_min"].between(1, 120)]
     df = df.sample(n, random_state=42)
     X = df[FEATURES].astype("float64")
-    return train_test_split(X, df["duration_min"],
-                            test_size=0.2, random_state=42)
+    return train_test_split(X, df["duration_min"], test_size=0.2, random_state=42)
